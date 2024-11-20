@@ -22,7 +22,7 @@ plt.ylabel('Aptitud')
 plt.legend()
 plt.grid(True)
 plt.savefig('grafica_aptitud.png')
-# plt.show()  # Comentado
+# plt.show()  # Comentado para no abrir la ventana de la gráfica
 
 # Cargar los resultados de evaluación
 with open('evaluation_results.pkl', 'rb') as f:
@@ -49,11 +49,11 @@ plt.bar(ind, empates, width, label='Empates', color='yellow')
 plt.bar(ind + width, derrotas, width, label='Derrotas', color='red')
 
 plt.ylabel('Porcentaje (%)')
-plt.title('Tasas de Victoria por Estrategia')
+plt.title('Tasas de Victoria por Estrategia contra Estrategia Aleatoria')
 plt.xticks(ind, estrategias)
 plt.legend()
 plt.ylim(0, 100)
 plt.grid(axis='y', linestyle='--', alpha=0.7)
 plt.tight_layout()
 plt.savefig('grafica_comparativa.png')
-# plt.show()  # Comentado
+# plt.show()  # Comentado para no abrir la ventana de la gráfica
